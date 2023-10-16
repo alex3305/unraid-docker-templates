@@ -3,7 +3,7 @@
   <Name>youtube-dl</Name>
   <Repository>jeeaaasustest/youtube-dl</Repository>
   <Registry>https://hub.docker.com/r/jeeaaasustest/youtube-dl/</Registry>
-  <TemplateURL>https://raw.githubusercontent.com/alex3305/unraid-templates/master/youtube-dl.xml</TemplateURL>  
+  <TemplateURL>https://raw.githubusercontent.com/alex3305/unraid-docker-templates/master/youtube-dl.xml</TemplateURL>  
   <WebUI>http://[IP]:[PORT:8080]/</WebUI>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
@@ -11,7 +11,7 @@
   <Project>https://github.com/Jeeaaasus/youtube-dl</Project>
   <Overview>Automated yt-dlp Docker image for downloading YouTube subscriptions</Overview>
   <Category>Downloaders, MediaApp:Video</Category>
-  <Icon>https://raw.githubusercontent.com/alex3305/unraid-templates/master/images/youtube-dl.png</Icon>
+  <Icon>https://raw.githubusercontent.com/alex3305/unraid-docker-templates/master/images/youtube-dl.png</Icon>
   <Config Name="WebUI" Target="8080" Default="8080" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
   <Config Name="Scrape interval" Target="youtubedl_interval" Default="3h" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">3h</Config>
   <Config Name="Config directory" Target="/config" Default="/mnt/user/appdata/youtube-dl/config" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/youtube-dl/config</Config>
