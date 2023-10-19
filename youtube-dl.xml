@@ -10,7 +10,7 @@
   <Support />
   <Project>https://github.com/Jeeaaasus/youtube-dl</Project>
   <Overview>Automated yt-dlp Docker image for downloading YouTube subscriptions</Overview>
-  <Category>Downloaders, MediaApp:Video</Category>
+  <Category>Downloaders: MediaApp:Video</Category>
   <Icon>https://raw.githubusercontent.com/alex3305/unraid-docker-templates/master/images/youtube-dl.png</Icon>
   <Config Name="WebUI" Target="8080" Default="8080" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
   <Config Name="Scrape interval" Target="youtubedl_interval" Default="3h" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">3h</Config>
