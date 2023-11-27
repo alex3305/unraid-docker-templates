@@ -11,3 +11,13 @@ Easy to use Docker templates for unRAID.
 - 📖 [GitHub Repository](https://github.com/Jeeaaasus/youtube-dl)
 - 🐳 [Docker Hub](https://hub.docker.com/r/jeeaaasustest/youtube-dl)
 
+## Dockge by Louis Lam
+
+![Dockge logo](images/dockge.png)
+
+> A fancy, easy-to-use and reactive self-hosted docker compose.yaml stack-oriented manager.
+
+- 📖 [GitHub Repository](https://github.com/louislam/dockge)
+- 🐳 [Docker Hub](https://hub.docker.com/r/louislam/dockge)
+
+
