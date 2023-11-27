@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>dockge</Name>
+  <Repository>louislam/dockge:1</Repository>
+  <Registry>https://hub.docker.com/r/louislam/dockge</Registry>
+  <TemplateURL>https://raw.githubusercontent.com/alex3305/unraid-docker-templates/master/dockge.xml</TemplateURL>  
+  <WebUI>http://[IP]:[PORT:5001]/</WebUI>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support />
+  <Project>https://github.com/louislam/dockge</Project>
+  <Overview>A fancy, easy-to-use and reactive self-hosted docker compose.yaml stack-oriented manager.</Overview>
+  <Category>Tools: Network:Management</Category>
+  <Icon>https://raw.githubusercontent.com/alex3305/unraid-docker-templates/master/images/dockge.png</Icon>
+  <Config Name="Web UI" Target="5001" Default="5001" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">5001</Config>
+  <Config Name="Stacks Directory Variable" Target="DOCKGE_STACKS_DIR" Default="/mnt/user/appdata/dockge/stacks" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">/mnt/user/appdata/dockge/stacks</Config>
+  <Config Name="App data" Target="/app/data" Default="/mnt/user/appdata/dockge/data" Mode="rw" Description="" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/dockge/data</Config>
+  <Config Name="Docker Socket" Target="/var/run/docker.sock" Default="/var/run/docker.sock" Mode="rw" Description="" Type="Path" Display="advanced-hide" Required="true" Mask="false">/var/run/docker.sock</Config>
+  <Config Name="Stacks Directory Path" Target="/mnt/user/appdata/dockge/stacks" Default="/mnt/user/appdata/dockge/stacks" Mode="rw" Description="" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/dockge/stacks</Config>
+</Container>
