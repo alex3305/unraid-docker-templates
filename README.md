@@ -4,7 +4,7 @@ Easy to use Docker templates for unRAID.
 
 ## youtube-dl by Jeeaaasus
 
-![youtube-dl logo](images/youtube-dl.png)
+<img src="images/youtube-dl.png" height="100" title="youtube-dl" alt="youtube-dl logo">
 
 > Automated yt-dlp Docker image for downloading YouTube subscriptions
 
@@ -13,11 +13,19 @@ Easy to use Docker templates for unRAID.
 
 ## Dockge by Louis Lam
 
-![Dockge logo](images/dockge.png)
+<img src="images/dockge.png" height="100" title="Dockge" alt="Dockge logo">
 
 > A fancy, easy-to-use and reactive self-hosted docker compose.yaml stack-oriented manager.
 
 - 📖 [GitHub Repository](https://github.com/louislam/dockge)
 - 🐳 [Docker Hub](https://hub.docker.com/r/louislam/dockge)
 
+## Dex IDP
 
+<img src="images/dex.png" height="100" title="Dex" alt="Dex logo">
+
+> Integrate any identity provider into your application using OpenID Connect.
+
+- 🏠 [Homepage](https://dexidp.io/)
+- 📖 [GitHub Repository](https://github.com/dexidp/dex)
+- 🐳 [Docker Hub](https://hub.docker.com/r/dexidp/dex)
