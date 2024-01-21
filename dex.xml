@@ -12,6 +12,7 @@
   <Overview>Integrate any identity provider into your application using OpenID Connect.</Overview>
   <Category>Tools:Utilities Security</Category>
   <Icon>https://raw.githubusercontent.com/alex3305/unraid-docker-templates/master/images/dex.png</Icon>
+  <PostArgs>dex serve /var/dex/config.yaml</PostArgs>
   <Config Name="HTTP Port" Target="4190" Default="4190" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">4190</Config>
   <Config Name="App data" Target="/var/dex" Default="/mnt/user/appdata/dex" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/dex</Config>
 </Container>
