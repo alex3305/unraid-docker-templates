@@ -29,3 +29,11 @@ Easy to use Docker templates for unRAID.
 - 🏠 [Homepage](https://dexidp.io/)
 - 📖 [GitHub Repository](https://github.com/dexidp/dex)
 - 🐳 [Docker Hub](https://hub.docker.com/r/dexidp/dex)
+
+## Music Assistant
+
+<img src="images/music-assistant.png" height="100" title="Dex" alt="Dex logo">
+
+> Turn your Home Assistant instance into a jukebox, hassle free streaming of your favourite media to Home Assistant media players.
+
+- 📖 [GitHub Repository](https://github.com/music-assistant/hass-music-assistant)

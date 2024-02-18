@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>music-assistant</Name>
+  <Repository>ghcr.io/music-assistant/server:latest</Repository>
+  <Registry />
+  <TemplateURL>https://raw.githubusercontent.com/alex3305/unraid-docker-templates/master/music-assistant.xml</TemplateURL>  
+  <WebUI>http://[IP]:[PORT:8095]/</WebUI>
+  <Network>host</Network>
+  <Privileged>true</Privileged>
+  <Support />
+  <Project>https://dexidp.io/</Project>
+  <Overview>Turn your Home Assistant instance into a jukebox, hassle free streaming of your favourite media to Home Assistant media players.</Overview>
+  <Category>MediaApp:Music MediaServer:Music</Category>
+  <Icon>https://raw.githubusercontent.com/alex3305/unraid-docker-templates/master/images/music-assistant.png</Icon>
+  <Config Name="App data" Target="/data" Default="/mnt/user/appdata/music-assistant" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/music-assistant</Config>
+</Container>
