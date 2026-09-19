@@ -7,10 +7,12 @@
   <WebUI>http://[IP]:[PORT:8095]/</WebUI>
   <Network>host</Network>
   <Privileged>true</Privileged>
-  <Support />
-  <Project>https://dexidp.io/</Project>
-  <Overview>Turn your Home Assistant instance into a jukebox, hassle free streaming of your favourite media to Home Assistant media players.</Overview>
+  <Support>https://github.com/music-assistant/support</Support>
+  <Project>https://github.com/music-assistant/server</Project>
+  <Overview>Music Assistant is a free, open source music library manager. It brings your streaming services and your own files together into one library, and plays them on almost any speaker in the house.</Overview>
+  <Description>Music Assistant pulls your streaming services, local files, radio, podcasts, and audiobooks into a single searchable library. It streams to almost any player — Sonos, Chromecast, AirPlay, Squeezelite, DLNA, and others — with support for synchronized multi-room playback, gapless transitions, crossfade, and volume leveling. Music Assistant is a project of the Open Home Foundation.</Description>
   <Category>MediaApp:Music MediaServer:Music</Category>
   <Icon>https://raw.githubusercontent.com/alex3305/unraid-docker-templates/master/images/music-assistant.png</Icon>
   <Config Name="App data" Target="/data" Default="/mnt/user/appdata/music-assistant" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/music-assistant</Config>
+  <Config Name="Log Level" Target="LOG_LEVEL" Default="info" Mode="" Description="Log verbosity level." Type="Variable" Display="always" Required="true" Mask="false">info</Config>
 </Container>
