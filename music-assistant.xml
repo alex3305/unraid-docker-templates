@@ -3,14 +3,29 @@
   <Name>music-assistant</Name>
   <Repository>ghcr.io/music-assistant/server:latest</Repository>
   <Registry />
-  <TemplateURL>https://raw.githubusercontent.com/alex3305/unraid-docker-templates/master/music-assistant.xml</TemplateURL>  
+  <TemplateURL>https://raw.githubusercontent.com/alex3305/unraid-docker-templates/master/music-assistant.xml</TemplateURL>
   <WebUI>http://[IP]:[PORT:8095]/</WebUI>
   <Network>host</Network>
-  <Privileged>true</Privileged>
-  <Support />
-  <Project>https://dexidp.io/</Project>
-  <Overview>Turn your Home Assistant instance into a jukebox, hassle free streaming of your favourite media to Home Assistant media players.</Overview>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/music-assistant/support</Support>
+  <Project>https://github.com/music-assistant/server</Project>
+  <Overview>Music Assistant is a free, open source music library manager. It brings your streaming services and your own files together into one library, and plays them on almost any speaker in the house.
+
+IMPORTANT - Network mode: This container requires Host networking. MA discovers and streams to players over mDNS/uPnP, and protocols like AirPlay open random TCP/UDP ports, so it must sit on the same flat (layer 2) network as your players with no VLANs or firewall between them. Bridge networking only works if you exclusively use software-only players and is not supported by the MA team.
+
+Local music files / Privileged Mode: to let MA see your own files, bind-mount your music folder rather than granting the container SMB/NFS mount privileges. Mounting the share on the host and passing it through is the more secure, recommended option. Only enable Privileged Mode if MA needs to mount a remote share itself from inside the container - most users don't need this, and it reduces container isolation.</Overview>
+  <Description>Music Assistant pulls your streaming services (Spotify, Tidal, Qobuz, and more), local files, radio, podcasts, and audiobooks into a single searchable library, automatically linking duplicate releases from different sources and filling in artwork, lyrics, and artist info. It streams to almost any player — Sonos, Chromecast, AirPlay, Squeezelite, DLNA, and others — with synchronized multi-room playback, gapless transitions, crossfade, and volume leveling. You can control it from any browser (it installs to your phone like an app) or pair it with Home Assistant for automations and voice control. This container runs the always-on server component, which acts as the core: it holds your library and coordinates your sources and players. Music Assistant is a project of the Open Home Foundation.
+
+IMPORTANT - Network mode: This container requires Host networking. MA discovers and streams to players over mDNS/uPnP and protocols like AirPlay open random TCP/UDP ports, so it must sit on the same flat (layer 2) network as your players with no VLANs or firewall between them. Running it on a bridge network is only workable if you exclusively use software/software-only players and is not supported by the MA team.
+
+Ports used (informational only under host networking - no mapping needed): 8095 (web UI) and 8097 (audio streaming to players).
+
+Local music files: if you want MA to see your own files, bind-mount your music folder rather than granting the container SMB/NFS mount privileges (Privileged Mode). Mounting the share on the host and passing it through is the more secure option recommended by the MA team. Only set Privileged Mode to On if you specifically need MA to mount a remote share itself from inside the container - this is not needed for most users and reduces container isolation.
+
+Minimum hardware: 64-bit CPU (recent Intel/AMD and at least 2GB RAM (4GB+ recommended). The first library sync can take a while depending on library size; later syncs are much faster.</Description>
   <Category>MediaApp:Music MediaServer:Music</Category>
   <Icon>https://raw.githubusercontent.com/alex3305/unraid-docker-templates/master/images/music-assistant.png</Icon>
-  <Config Name="App data" Target="/data" Default="/mnt/user/appdata/music-assistant" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/music-assistant</Config>
+  <Config Name="App data" Target="/data" Default="/mnt/user/appdata/music-assistant" Mode="rw" Description="Persistent storage for the MA library database and settings" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/music-assistant</Config>
+  <Config Name="Media" Target="/media" Default="/mnt/user/Music" Mode="ro" Description="Optional: mount your local music share here (read-only) so MA can index it. Only needed if you use the Local Files provider." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/Music</Config>
+  <Config Name="Log Level" Target="LOG_LEVEL" Default="info" Mode="" Description="Log verbosity level. One of: critical, error, warning, info, debug." Type="Variable" Display="always" Required="true" Mask="false">info</Config>
 </Container>

@@ -34,6 +34,6 @@ Easy to use Docker templates for unRAID.
 
 <img src="images/music-assistant.png" height="100" title="Dex" alt="Dex logo">
 
-> Turn your Home Assistant instance into a jukebox, hassle free streaming of your favourite media to Home Assistant media players.
+> Music Assistant is a free, open source music library manager. It brings your streaming services and your own files together into one library, and plays them on almost any speaker in the house.
 
-- 📖 [GitHub Repository](https://github.com/music-assistant/hass-music-assistant)
+- 📖 [GitHub Repository](https://github.com/music-assistant/server)
